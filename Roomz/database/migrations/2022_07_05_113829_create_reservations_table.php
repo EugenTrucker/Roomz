@@ -20,7 +20,7 @@ return new class extends Migration
             $table->foreignId('season_id')->constrained();
             $table->tinyInteger('has_breakfast');
             $table->date('reservation_start');
-            $table->tinyInteger('reservation_end');
+            $table->date('reservation_end');
             $table->timestamps();
         });
     }
