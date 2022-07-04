@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('rooms', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->tinyInteger('is_reserved');
+            $table->tinyInteger('is_cleaned');
+            $table->float('daily_price');
             $table->timestamps();
         });
     }
