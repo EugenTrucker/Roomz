@@ -22,4 +22,10 @@ class Season extends Model
         $this->delete();
         return $this;
     }
+
+    public function edit($data)
+    {
+        $this->update($data);
+        return $this;
+    }
 }

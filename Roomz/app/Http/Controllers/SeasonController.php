@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Season\EditSeasonRequest;
 use App\Http\Requests\Season\StoreSeasonRequest;
 use App\Models\Season;
 use Illuminate\Http\Request;
@@ -31,4 +32,9 @@ class SeasonController extends Controller
             return $season;
     }
 
+    public function update(EditSeasonRequest $request, Season $season)
+    {
+        $season->edit($request->validated());
+        return $season;
+    }
 }

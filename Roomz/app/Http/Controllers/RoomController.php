@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 
+use App\Http\Requests\Room\EditRoomRequest;
+use App\Http\Requests\Room\StoreRoomRequest;
 use App\Models\Room;
 use Illuminate\Http\Request;
 
@@ -32,7 +34,7 @@ class RoomController extends Controller
         return $room;
     }
 
-    public function update(Room $room, UpdateRoomRequest $request)
+    public function update(Room $room, EditRoomRequest $request)
     {
         $room->edit($request->validated());
         return $room;

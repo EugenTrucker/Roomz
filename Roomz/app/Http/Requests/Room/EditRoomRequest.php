@@ -13,7 +13,7 @@ class EditRoomRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,10 @@ class EditRoomRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'sometimes',
+            'daily_price' => 'sometimes',
+            'is_cleaned' => 'sometimes',
+            'is_reserved' => 'sometimes',
         ];
     }
 }

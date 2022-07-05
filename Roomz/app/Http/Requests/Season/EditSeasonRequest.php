@@ -13,7 +13,7 @@ class EditSeasonRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,8 @@ class EditSeasonRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'multiplier' => 'sometimes',
+            'season_name' => 'sometimes'
         ];
     }
 }

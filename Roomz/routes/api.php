@@ -31,4 +31,5 @@ Route::get('/seasons', [SeasonController::class, 'index']);
 Route::get('/season/{season}', [SeasonController::class, 'show']);
 Route::post('/season', [SeasonController::class, 'store']);
 Route::delete('/season/{season}', [SeasonController::class, 'destroy']);
+Route::patch('/season/{season}', [SeasonController::class, 'update']);
 
