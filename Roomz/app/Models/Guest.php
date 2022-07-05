@@ -22,7 +22,20 @@ class Guest extends Model
 
     public static function create($data)
     {
-        $guest = self::create($data);
+        $guest = new self($data);
+        $guest->save();
         return $guest;
+    }
+
+    public function remove()
+    {
+        $this->delete();
+        return $this;
+    }
+
+    public function edit($data)
+    {
+        $this->update($data);
+        return $this;
     }
 }

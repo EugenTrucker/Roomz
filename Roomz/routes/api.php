@@ -36,4 +36,7 @@ Route::patch('/season/{season}', [SeasonController::class, 'update']);
 Route::get('/guests', [GuestController::class, 'index']);
 Route::get('/guest/{guest}', [GuestController::class, 'show']);
 Route::post('/guest', [GuestController::class, 'store']);
+Route::delete('/guest/{guest}', [GuestController::class, 'delete']);
+Route::patch('/guest/{guest}', [GuestController::class, 'update']);
+
 
