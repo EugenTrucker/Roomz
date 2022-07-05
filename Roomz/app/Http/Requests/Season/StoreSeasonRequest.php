@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Season;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreRoomRequest extends FormRequest
+class StoreSeasonRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,8 +24,8 @@ class StoreRoomRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>'required',
-            'daily_price'=>'required'
+            'multiplier' => 'required',
+            'season_name' => 'required'
         ];
     }
 }

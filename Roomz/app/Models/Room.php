@@ -11,9 +11,9 @@ class Room extends Model
 
     use HasFactory;
 
-    public static function create($data)
+    public static function create($data):self
     {
-        $room = new Room($data);
+        $room = new self($data);
         $room->save();
         return $room;
     }
@@ -23,4 +23,11 @@ class Room extends Model
         $this->update($data);
         return $this;
     }
+
+    public function remove()
+    {
+        $this->delete();
+        return $this;
+    }
+
 }

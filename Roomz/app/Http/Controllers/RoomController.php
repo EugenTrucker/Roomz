@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreRoomRequest;
-use App\Http\Requests\UpdateRoomRequest;
+
 use App\Models\Room;
 use Illuminate\Http\Request;
 
@@ -29,13 +28,13 @@ class RoomController extends Controller
 
     public function destroy(Room $room)
     {
-        $room->delete();
+        $room->remove();
         return $room;
     }
 
     public function update(Room $room, UpdateRoomRequest $request)
     {
-        $room->edit($request->all());
+        $room->edit($request->validated());
         return $room;
     }
 }

@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoomController;
+use App\Http\Controllers\SeasonController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,4 +25,10 @@ Route::get('/room/{room}', [RoomController::class, 'index']);
 Route::post('room', [RoomController::class, 'store']);
 Route::patch('/room/{room}', [RoomController::class, 'update']);
 Route::delete('/room/{room}', [RoomController::class, 'destroy']);
+
+
+Route::get('/seasons', [SeasonController::class, 'index']);
+Route::get('/season/{season}', [SeasonController::class, 'show']);
+Route::post('/season', [SeasonController::class, 'store']);
+Route::delete('/season/{season}', [SeasonController::class, 'destroy']);
 
